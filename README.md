@@ -1,3 +1,6 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+
 # Тестовое задание
 
 Написать эндпойнт, в качестве параметра принимающий незакодированную (unencoded) ссылку и возвращающий её закодированный вариант.
