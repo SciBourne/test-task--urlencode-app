@@ -1,0 +1,66 @@
+#+TITLE: Test task HTTP-client
+#+AUTHOR: SciBourne
+#+EMAIL: bourne-sci-hack@yandex.ru
+
+#+LANGUAGE: en
+#+PROPERTY: results silent
+#+STARTUP: overview
+#+STARTUP: indent
+#+STARTUP: hidestars
+
+
+
+#+NAME: entry-point
+: http://127.0.0.1:8000/api/v1
+
+
+* TODO написать unit-тесты
+* TODO написать интеграционные тесты
+* TODO написать dockerfile
+* TODO создать CI/CD Jenkins
+* TODO написать README
+
+
+
+* URL-encode
+
+Get percent-encode:
+#+BEGIN_SRC restclient :var ~=entry-point
+  GET :~/urlencode?encode_type=percent&source=http://yandex.ru
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC js
+{
+  "encoded_url": "http%3A%2F%2Fyandex.ru",
+  "encode_type": "percent"
+}
+// GET http://127.0.0.1:8000/api/v1/urlencode?encode_type=percent&source=http://yandex.ru
+// HTTP/1.1 200
+// content-length: 64
+// content-type: application/json
+// date: Mon, 10 Jul 2023 20:06:02 GMT
+// server: hypercorn-h11
+// Request duration: 0.001839s
+#+END_SRC
+
+
+Get base64-encode:
+#+BEGIN_SRC restclient :var ~=entry-point
+  GET :~/urlencode?encode_type=base64&source=http://yandex.ru
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC js
+{
+  "encoded_url": "aHR0cDovL3lhbmRleC5ydQ==",
+  "encode_type": "base64"
+}
+// GET http://127.0.0.1:8000/api/v1/urlencode?encode_type=base64&source=http://yandex.ru
+// HTTP/1.1 200
+// content-length: 65
+// content-type: application/json
+// date: Mon, 10 Jul 2023 20:06:06 GMT
+// server: hypercorn-h11
+// Request duration: 0.001638s
+#+END_SRC
