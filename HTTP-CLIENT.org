@@ -14,13 +14,6 @@
 : http://127.0.0.1:8000/api/v1
 
 
-* TODO написать unit-тесты
-* TODO написать интеграционные тесты
-* TODO написать dockerfile
-* TODO создать CI/CD Jenkins
-* TODO написать README
-
-
 
 * URL-encode
 
