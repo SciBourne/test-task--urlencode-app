@@ -1,5 +1,11 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+[![codecov](https://codecov.io/gh/SciBourne/test-task--urlencode-app/branch/main/graph/badge.svg?token=I122V71IIF)](https://codecov.io/gh/SciBourne/test-task--urlencode-app)
+[![gitlab-ci: build](http://scibourne.gitlab.io/test-task-urlencode-app/build.svg)](https://gitlab.com/SciBourne/test-task-urlencode-app)
+[![gitlab-ci: type-check](http://scibourne.gitlab.io/test-task-urlencode-app/type-check.svg)](https://gitlab.com/SciBourne/test-task-urlencode-app)
+[![gitlab-ci: unit-tests](http://scibourne.gitlab.io/test-task-urlencode-app/unit-tests.svg)](https://gitlab.com/SciBourne/test-task-urlencode-app)
+[![gitlab-ci: api-tests](http://scibourne.gitlab.io/test-task-urlencode-app/api-tests.svg)](https://gitlab.com/SciBourne/test-task-urlencode-app)
+
 
 # Тестовое задание
 
