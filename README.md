@@ -6,6 +6,7 @@
 [![gitlab-ci: unit-tests](http://scibourne.gitlab.io/test-task-urlencode-app/unit-tests.svg)](https://gitlab.com/SciBourne/test-task-urlencode-app)
 [![gitlab-ci: api-tests](http://scibourne.gitlab.io/test-task-urlencode-app/api-tests.svg)](https://gitlab.com/SciBourne/test-task-urlencode-app)
 
+<br>
 
 # Тестовое задание
 
