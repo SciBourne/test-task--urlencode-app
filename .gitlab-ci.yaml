@@ -46,7 +46,7 @@ prepare project:
 
   stage: build
   script:
-    - mkdir -p .poetry/.venv
+    - mkdir -p $POETRY_VIRTUALENVS_PATH
     - mkdir $STAGE_STATES
 
     - python3.11 -m venv $POETRY_HOME
