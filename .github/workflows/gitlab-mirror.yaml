@@ -13,13 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Push to GitLab mirror
+      - name: Push to GitLab mirror     
         env:
           name_token: github-mirroring
           token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
-          repo_src: SciBourne/test-task--urlencode-app.git
-          repo_dst: SciBourne/test-task-urlencode-app.git
+          
+          user: SciBourne          
+          repo_src: test-task--urlencode-app.git
+          repo_dst: test-task-urlencode-app.git
+          
         run: |
-          git clone --bare https://github.com/${repo_src}
+          git clone --bare https://github.com/${user}/${repo_src}
           cd $repo_src
-          git push --mirror https://${name_token}:${token}@gitlab.com/${repo_dst}
+          git push --mirror https://${name_token}:${token}@gitlab.com/${user}/${repo_dst}
