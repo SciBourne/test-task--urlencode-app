@@ -85,8 +85,6 @@ codecov update:
   after_script: null
 
   script:
-    #- export CODECOV_TOKEN=8c66138b-23ef-462a-ba15-3c1a536a871a
-
     - curl -Os https://uploader.codecov.io/latest/linux/codecov
     - chmod +x codecov
 
