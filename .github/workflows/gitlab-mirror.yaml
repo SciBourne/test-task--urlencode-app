@@ -16,11 +16,6 @@ jobs:
       - name: Push to GitLab mirror
         env: 
           token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
-        run: |
-          git config user.name "SciBourne";
-          git config user.email "bourne-sci-hack@yandex.ru";
-          git remote set-url origin "https://github-mirroring:${token}@gitlab.com/SciBourne/test-task-urlencode-app.git";
-          git pull origin main --rebase=merges;
-          git add -A;
-          git commit -m "Update";
+        run:
+          git remote set-url origin "https://github-mirroring:${token}@gitlab.com/SciBourne/test-task-urlencode-app.git"
           git push origin main
