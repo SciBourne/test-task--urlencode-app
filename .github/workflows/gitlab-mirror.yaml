@@ -19,5 +19,6 @@ jobs:
           token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
           repo: SciBourne/test-task-urlencode-app.git
         run: |
-          git remote set-url origin "https://${name_token}:${token}@gitlab.com/${repo}"
-          git push --mirror origin main
+          git clone --bare https://github.com/SciBourne/test-task--urlencode-app.git
+          cd test-task--urlencode-app.git          
+          git push --mirror https://${name_token}:${token}@gitlab.com/${repo}
