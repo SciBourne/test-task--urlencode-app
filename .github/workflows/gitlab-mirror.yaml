@@ -1,0 +1,23 @@
+name: GitLab mirror
+
+on:
+  push:
+    branches: [ "main" ]    
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  repository_mirroring:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v3   
+      
+      - name: Push to GitLab mirror
+        env: 
+          token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+        run:
+          git config user.name "SciBourne"
+          git config user.email "bourne-sci-hack@yandex.ru"
+          git remote set-url origin "https://github-mirroring:${token}@gitlab.com/SciBourne/test-task-urlencode-app.git"
+          git push origin main
